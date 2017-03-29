@@ -2,7 +2,7 @@
 
 Janus Gateway is a backend application developed in C for Ubuntu.
 
-Installation
+**Installation**
 
 It would be advisable try to install it on a Ubuntu LTS version.
 
@@ -14,6 +14,6 @@ Note: I have disabled several service and protocols to make me easier the instal
 
 The original installation is here https://github.com/meetecho/janus-gateway
 
-Deployment
+**Deployment**
 
-You can run the script, it simply run de compilated linux command of Janus and it listens in 8088 port.
+You can run the script, it simply runs the compilated linux command of Janus and it listens in 8088 port.
