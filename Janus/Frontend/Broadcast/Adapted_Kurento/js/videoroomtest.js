@@ -59,7 +59,6 @@ var mystream = null;
 var feeds = [];
 var bitrateTimer = [];
 
-
 $(document).ready(function() {
 	// Initialize the library (all console debuggers enabled)
 	Janus.init({debug: "all", callback: function() {
@@ -147,7 +146,8 @@ $(document).ready(function() {
 											// Publisher/manager created, negotiate WebRTC and attach to existing feeds, if any
 											myid = msg["id"];
 											Janus.log("Successfully joined room " + msg["room"] + " with ID " + myid);
-											publishOwnFeed(true);
+                                            if(kindUser=="presenter")
+								                publishOwnFeed(true);
 											// Any new feed to attach to?
 											if(msg["publishers"] !== undefined && msg["publishers"] !== null) {
 												var list = msg["publishers"];
@@ -247,7 +247,7 @@ $(document).ready(function() {
 										//$('#unpublish').click(unpublishOwnFeed);
 										if(kindUser=="viewer"){
 											//setTimeout(unpublishOwnFeed, 200);
-											unpublishOwnFeed();
+											//unpublishOwnFeed();
 										}
 									}
 									//$('#publisher').removeClass('hide').html(myusername).show();
